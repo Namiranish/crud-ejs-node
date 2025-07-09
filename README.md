@@ -32,6 +32,8 @@ A simple web application that performs **CRUD operations** (Create, Read, Update
 - HTML/CSS (served from `public/` folder)
 
 ---
+## ⚙️ Install Dependencies
+Run the following command in your project directory:
 
-## 📦 Project Structure
+npm install express mongoose ejs body-parser cookie-parser method-override
 
