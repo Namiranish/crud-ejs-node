@@ -28,6 +28,7 @@ A simple web application that performs **CRUD operations** (Create, Read, Update
 - Node.js
 - Express.js
 - MongoDB + Mongoose
+- Tailwind CSS
 - EJS (Embedded JavaScript Templates)
 - HTML/CSS (served from `public/` folder)
 
