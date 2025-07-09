@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+      <link rel="stylesheet" href="/stylesheet/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="w-full h-screen p-10 text-black">
+        <a class="text-blue-500" href="/">Home</a>
+        <h1 class="text-3xl tracking-tighter mb-3">All User</h1>
+        <div class="users flex gap-5 flex-wrap">
+          
+       <% if(users.length>0){ %>
+
+         <% users.forEach((val)=>{ %>
+
+        <div class="user w-60 p-5 rounded-lg bg-gray-200">
+            <div class="w-full h-52 rounded-lg bg-red-500 overflow-hidden">
+                <img class="w-full h-full object-cover" src= "<%= val.image %>" alt="">
+            </div>
+                <h3 class="text-xl mt-3 tracking-tighter"><%= val.name %></h3>
+                <h5 class="text-gray-500"><%= val.mail %></h5>
+                <div class="flex gap-3 mt-3">
+                    <a class="text-gray-600" href="/edit/<%= val._id %>">Edit User</a>
+                    <a class="text-black-600" href="/delete/<%= val._id %>">Delete User</a>
+            </div>
+        </div>
+
+       <% }) %>
+      <% }else{  %>
+            <h1>No users</h1>
+     <% } %>
+
+        </div>
+    </div>
+</body>
+</html>
