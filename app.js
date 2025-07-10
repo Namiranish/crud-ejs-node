@@ -15,7 +15,7 @@ app.get('/',(req,res)=>{
 
 app.post('/create', async (req,res)=>{
     let{name,mail,image} = req.body; 
-    console.log(req);
+    // console.log(req);
     try{
        const createdUser = await userModel.create({
         name:name,  

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require("dotenv").config();
 
-mongoose.connect('mongodb+srv://anisnamira:S70tFBrurdVvSLC1@crud-namira.pommjle.mongodb.net/?retryWrites=true&w=majority&appName=crud-namira')
+mongoose.connect(process.env.MONGO_URL);
 
 const userSchema = new mongoose.Schema({
     name: {type:String, required:true},
